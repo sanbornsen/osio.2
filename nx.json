@@ -16,6 +16,9 @@
     },
     "osio-framework": {
       "tags": []
+    },
+    "osio-ui": {
+      "tags": []
     }
   }
 }

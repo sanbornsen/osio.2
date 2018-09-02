@@ -9,13 +9,12 @@ export class BodyDirective implements AfterViewInit {
   constructor(
     private templateRef: TemplateRef<any>,
     private templateService: TemplateService
-  ) { console.log('###-0'); }
+  ) {}
 
   /**
    * Pushing the template to the service
    */
   ngAfterViewInit() {
-    console.log('###-1');
     this.templateService.setBodyTemplate({
       template: this.templateRef,
       id: 0

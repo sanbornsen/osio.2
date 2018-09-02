@@ -18,6 +18,9 @@
     "paths": {
       "@osio/osio-framework": [
         "libs/osio-framework/src/index.ts"
+      ],
+      "@osio/osio-ui": [
+        "libs/osio-ui/src/index.ts"
       ]
     }
   },

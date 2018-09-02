@@ -21,6 +21,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.templateService.templteRef.pipe(delay(200))
       .subscribe((template: TemplateStruct) => {
+        this.bodyContainerRef.clear();
         this.bodyContainerRef.createEmbeddedView(template.template);
       })
   }

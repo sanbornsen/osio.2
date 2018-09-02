@@ -149,6 +149,34 @@
           }
         }
       }
+    },
+    "osio-ui": {
+      "root": "libs/osio-ui",
+      "sourceRoot": "libs/osio-ui/src",
+      "projectType": "library",
+      "prefix": "osio",
+      "architect": {
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/osio-ui/src/test.ts",
+            "tsConfig": "libs/osio-ui/tsconfig.spec.json",
+            "karmaConfig": "libs/osio-ui/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/osio-ui/tsconfig.lib.json",
+              "libs/osio-ui/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
