@@ -7,5 +7,15 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "osio-host": {
+      "tags": []
+    },
+    "osio-host-e2e": {
+      "tags": []
+    },
+    "osio-framework": {
+      "tags": []
+    }
+  }
 }

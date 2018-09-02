@@ -16,6 +16,9 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@osio/osio-framework": [
+        "libs/osio-framework/src/index.ts"
+      ]
     }
   },
   "exclude": [
