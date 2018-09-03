@@ -9,6 +9,10 @@ import { OsioUiModule } from '../../../osio-ui/src';
 export const osioFrameworkRoutes: Route[] = [{
   path: '',
   component: DefaultHomeComponent
+},
+{
+  path: '**',
+  component: DefaultHomeComponent
 }];
 
 @NgModule({

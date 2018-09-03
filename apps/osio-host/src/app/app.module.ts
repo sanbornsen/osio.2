@@ -14,10 +14,10 @@ import { OsioUiModule } from '../../../../libs/osio-ui/src';
     BrowserModule,
     NxModule.forRoot(),
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
-    OsioFrameworkModule,
     TestModule,
     OsioDirectiveModule,
-    OsioUiModule
+    OsioUiModule,
+    OsioFrameworkModule
   ],
   providers: [],
   bootstrap: [AppComponent]
