@@ -4,8 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NxModule } from '@nrwl/nx';
 import { RouterModule } from '@angular/router';
-import { OsioFrameworkModule } from '@osio/osio-framework';
+import { OsioFrameworkModule, OsioDirectiveModule } from '@osio/osio-framework';
 import { TestModule } from './test/test.module';
+import { OsioUiModule } from '../../../../libs/osio-ui/src';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,9 @@ import { TestModule } from './test/test.module';
     NxModule.forRoot(),
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     OsioFrameworkModule,
-    TestModule
+    TestModule,
+    OsioDirectiveModule,
+    OsioUiModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,6 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [CommonModule, RouterModule],
   declarations: [PrimaryNavigationComponent, PrimaryNavigationItemComponent],
-  exports: [PrimaryNavigationComponent]
+  exports: [PrimaryNavigationComponent, PrimaryNavigationItemComponent]
 })
 export class OsioUiModule {}
