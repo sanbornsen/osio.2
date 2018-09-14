@@ -177,6 +177,125 @@
           }
         }
       }
+    },
+    "osio-planner": {
+      "root": "apps/osio-planner/",
+      "sourceRoot": "apps/osio-planner/src",
+      "projectType": "application",
+      "prefix": "osio",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/osio-planner",
+            "index": "apps/osio-planner/src/index.html",
+            "main": "apps/osio-planner/src/main.ts",
+            "polyfills": "apps/osio-planner/src/polyfills.ts",
+            "tsConfig": "apps/osio-planner/tsconfig.app.json",
+            "assets": [
+              "apps/osio-planner/src/favicon.ico",
+              "apps/osio-planner/src/assets"
+            ],
+            "styles": [
+              "apps/osio-planner/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/osio-planner/src/environments/environment.ts",
+                  "with": "apps/osio-planner/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "osio-planner:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "osio-planner:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "osio-planner:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/osio-planner/src/test.ts",
+            "polyfills": "apps/osio-planner/src/polyfills.ts",
+            "tsConfig": "apps/osio-planner/tsconfig.spec.json",
+            "karmaConfig": "apps/osio-planner/karma.conf.js",
+            "styles": [
+              "apps/osio-planner/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "apps/osio-planner/src/favicon.ico",
+              "apps/osio-planner/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/osio-planner/tsconfig.app.json",
+              "apps/osio-planner/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "osio-planner-e2e": {
+      "root": "apps/osio-planner-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/osio-planner-e2e/protractor.conf.js",
+            "devServerTarget": "osio-planner:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "osio-planner:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/osio-planner-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

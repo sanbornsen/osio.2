@@ -19,6 +19,12 @@
     },
     "osio-ui": {
       "tags": []
+    },
+    "osio-planner": {
+      "tags": []
+    },
+    "osio-planner-e2e": {
+      "tags": []
     }
   }
 }
