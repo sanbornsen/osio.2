@@ -11,7 +11,8 @@ import { OsioFrameworkModule } from '@osio/osio-framework';
   imports: [
     BrowserModule,
     NxModule.forRoot(),
-    RouterModule.forRoot([], { initialNavigation: 'enabled' })
+    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    OsioFrameworkModule
   ],
   providers: [],
   bootstrap: [AppComponent]
